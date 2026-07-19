@@ -40,7 +40,7 @@ jobs:
         repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
     - name: Inyectar nuestro Árbol de Dispositivos
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: twrp/device/alcatel/9032Z
 

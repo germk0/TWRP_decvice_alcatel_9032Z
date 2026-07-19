@@ -54,7 +54,7 @@ jobs:
         make recoveryimage -j$(nproc --all)
 
     - name: Subir el archivo RECOVERY.IMG Terminado
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: TWRP-Alcatel-9032Z
         path: twrp/out/target/product/9032Z/recovery.img

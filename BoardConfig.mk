@@ -27,6 +27,13 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Forzar la limpieza de enlaces simbólicos en el ramdisk
+TARGET_RECOVERY_DEVICE_MODULES := \
+    cleanup_root_vendor
+
+# O de forma directa para TWRP en Android 10:
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+
 # Flags de TWRP
 TW_THEME := portrait_hdpi
 RECOVERY_VARIANT := twrp

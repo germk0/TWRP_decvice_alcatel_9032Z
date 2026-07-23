@@ -50,6 +50,7 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         source build/envsetup.sh
         lunch twrp_9032Z-eng
+        rm -rf out/target/product/9032Z/root/vendor
         make recoveryimage -j$(nproc --all)
 
     - name: Subir el archivo RECOVERY.IMG Terminado
